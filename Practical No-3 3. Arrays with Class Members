@@ -1,0 +1,68 @@
+ a. Create a class that handles single and two-dimensional arrays. Demonstrate storing and displaying array data using class methods.
+
+Code:-
+#include <iostream.h>
+#include <conio.h>
+
+class arraydemo
+{
+    int arr1[5];
+    int arr2[2][3];
+    int i, j;
+
+public:
+    void setdata()
+    {
+        // Single dimensional array
+        for (i = 0; i < 5; i++)
+        {
+            arr1[i] = i + 1;
+        }
+
+        // Two dimensional array
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 3; j++)
+            {
+                arr2[i][j] = (i + 1) * (j + 1);
+            }
+        }
+    }
+
+    void displaydata()
+    {
+        cout << "Single Dimensional Array:" << endl;
+        for (i = 0; i < 5; i++)
+        {
+            cout << arr1[i] << " ";
+        }
+
+        cout << endl << endl;
+        cout << "Two Dimensional Array:" << endl;
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 3; j++)
+            {
+                cout << arr2[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+};
+
+void main()
+{
+    clrscr();
+    arraydemo a;
+    a.setdata();
+    a.displaydata();
+    getch();
+}
+
+Output:-
+Single Dimensional Array:
+1 2 3 4 5
+
+Two Dimensional Array:
+1 2 3
+2 4 6
