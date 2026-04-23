@@ -1,0 +1,80 @@
+a. Use the scope resolution operator to declare variables at different scope levels. Display and compare the values of variables with different scopes.
+Code:-
+#include <iostream.h>
+#include <conio.h>
+
+// Global variable
+int x = 10;
+
+class Demo
+{
+public:
+    // Class variable
+    int x;
+
+    void show()
+    {
+        // Local variable
+        int x = 30;
+
+        cout << "Local variable x = " << x << endl;
+        cout << "Class variable x = " << this->x << endl;
+        cout << "Global variable x = " << ::x << endl;
+    }
+};
+
+void main()
+{
+    clrscr();
+
+    Demo obj;
+    obj.x = 20;   // Assign value to class variable
+
+    obj.show();
+
+    getch();
+}
+Output:-
+Local variable x = 30
+Class variable x = 20
+Global variable x = 10
+a. Use the scope resolution operator to declare variables at different scope levels. Display and compare the values of variables with different scopes.
+Code:-
+#include <iostream.h>
+#include <conio.h>
+
+// Global variable
+int x = 10;
+
+class Demo
+{
+public:
+    // Class variable
+    int x;
+
+    void show()
+    {
+        // Local variable
+        int x = 30;
+
+        cout << "Local variable x = " << x << endl;
+        cout << "Class variable x = " << this->x << endl;
+        cout << "Global variable x = " << ::x << endl;
+    }
+};
+
+void main()
+{
+    clrscr();
+
+    Demo obj;
+    obj.x = 20;   // Assign value to class variable
+
+    obj.show();
+
+    getch();
+}
+Output:-
+Local variable x = 30
+Class variable x = 20
+Global variable x = 10
