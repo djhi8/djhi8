@@ -1,0 +1,49 @@
+Aim: Advanced Concepts: a. Implement programs showcasing friend functions, inline functions, and the use of the this pointer within classes.
+Code: 
+#include <iostream.h>
+#include <conio.h>
+
+class number
+{
+    int x, y;
+
+public:
+    void setdata(int x, int y)
+    {
+        this->x = x;   // using this pointer
+        this->y = y;
+    }
+
+    inline void show()
+    {
+        cout << "Value of x: " << x << endl;
+        cout << "Value of y: " << y << endl;
+    }
+
+    // friend function declaration
+    friend void sum(number n);
+};
+
+// friend function definition
+void sum(number n)
+{
+    cout << "Sum (friend function): " << n.x + n.y << endl;
+}
+
+void main()
+{
+    clrscr();
+
+    number n;
+    n.setdata(5, 10);
+
+    n.show();     // inline function
+    sum(n);       // friend function
+
+    getch();
+}
+
+Output:-
+Value of x: 5
+Value of y: 10
+Sum (friend function): 15
