@@ -1,0 +1,60 @@
+Aim: Function Overloading and Overriding: a. Develop programs to demonstrate function overloading and overriding within classes.
+a) Function Overloading
+Code:
+#include <iostream.h>
+#include <conio.h>
+
+// Base class
+class base
+{
+public:
+    // Function Overloading
+    void show()
+    {
+        cout << "Function with no argument" << endl;
+    }
+
+    void show(int x)
+    {
+        cout << "Function with one argument: " << x << endl;
+    }
+
+    // Function to be overridden
+    void display()
+    {
+        cout << "Display from Base class" << endl;
+    }
+};
+
+// Derived class
+class derived : public base
+{
+public:
+    // Function Overriding
+    void display()
+    {
+        cout << "Display from Derived class" << endl;
+    }
+};
+
+void main()
+{
+    clrscr();
+
+    base b;
+    derived d;
+
+    // Function Overloading
+    b.show();
+    b.show(10);
+
+    // Function Overriding
+    d.display();
+
+    getch();
+}
+Output:
+Function with no argument
+Function with one argument: 10
+Display from Derived class
+
