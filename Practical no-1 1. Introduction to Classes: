@@ -33,6 +33,11 @@ void main()
     getch();
 }
 
+Output:-
+Name: Alice
+Age: 20
+
+
 b) Demonstrate the use of class instances to access data and invoke member functions.
 
 Code:-
@@ -65,3 +70,6 @@ void main()
 
     getch();
 }
+
+Output:-
+Car Speed: 60 km/h
